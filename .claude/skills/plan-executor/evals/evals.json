@@ -1,0 +1,26 @@
+{
+  "skill_name": "plan-executor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Implement the backend initialization plan at docs/plans/phase1/2026-03-07-task-1.1-implementation.md. Use the current branch.",
+      "expected_output": "Should read the plan, break down tasks into subtasks (1.1.1 through 1.1.20), create agents for backend work, invoke architecture-patterns skill, commit each task without AI attribution, and run code review at the end.",
+      "files": ["docs/plans/phase1/2026-03-07-task-1.1-implementation.md"],
+      "assertions": []
+    },
+    {
+      "id": 2,
+      "prompt": "Execute the frontend initialization plan from docs/plans/phase1/2026-03-07-task-1.2-implementation.md on a new branch called feature/frontend-init.",
+      "expected_output": "Should create new branch 'feature/frontend-init', read the plan, identify frontend tasks, invoke frontend-design and vercel-react-best-practices skills, implement tasks, commit per task, run code review focusing on React best practices.",
+      "files": ["docs/plans/phase1/2026-03-07-task-1.2-implementation.md"],
+      "assertions": []
+    },
+    {
+      "id": 3,
+      "prompt": "Run the implementation for docs/plans/phase2/2026-03-07-tasks-2.16-2.21-frontend.md with the --new-branch flag.",
+      "expected_output": "Should auto-generate branch name from plan (e.g., feature/phase2-frontend-tasks), parse multiple tasks, identify frontend-specific work, use parallel agents for independent tasks, commit each task with proper conventional commit format, analyze code for edge cases and performance issues.",
+      "files": ["docs/plans/phase2/2026-03-07-tasks-2.16-2.21-frontend.md"],
+      "assertions": []
+    }
+  ]
+}
