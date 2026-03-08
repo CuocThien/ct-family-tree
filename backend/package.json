@@ -8,5 +8,17 @@
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "@pothos/core": "^4.12.0",
+    "@pothos/plugin-zod": "^4.3.0",
+    "dotenv": "^17.3.1",
+    "graphql": "^16.13.1",
+    "graphql-yoga": "^5.18.1",
+    "hono": "^4.12.5",
+    "jose": "^6.2.0",
+    "minio": "^8.0.7",
+    "mongoose": "^9.2.4",
+    "zod": "^4.3.6"
   }
 }
