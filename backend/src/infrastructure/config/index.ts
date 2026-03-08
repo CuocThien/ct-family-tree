@@ -5,6 +5,12 @@ export const config = {
     nodeEnv: process.env.NODE_ENV || 'development',
     port: parseInt(process.env.PORT || '4000', 10),
   },
+  cors: {
+    origins: process.env.CORS_ORIGINS?.split(',') || [
+      'http://localhost:3000',
+      'http://localhost:5173',
+    ],
+  },
   database: {
     uri: process.env.MONGODB_URI || 'mongodb://localhost:27017/familytree',
   },
@@ -21,3 +27,28 @@ export const config = {
     useSSL: process.env.MINIO_USE_SSL === 'true',
   },
 } as const;
+
+// Production environment validation
+export function validateProductionConfig(): void {
+  if (config.app.nodeEnv === 'production') {
+    const errors: string[] = [];
+
+    if (config.jwt.secret === 'dev-secret-change-in-production') {
+      errors.push('JWT_SECRET must be set in production');
+    }
+
+    if (config.minio.accessKey === 'minioadmin') {
+      errors.push('MINIO_ACCESS_KEY must be changed from default in production');
+    }
+
+    if (config.minio.secretKey === 'minioadmin') {
+      errors.push('MINIO_SECRET_KEY must be changed from default in production');
+    }
+
+    if (errors.length > 0) {
+      console.error('❌ Production configuration errors:');
+      errors.forEach((err) => console.error(`  - ${err}`));
+      process.exit(1);
+    }
+  }
+}
