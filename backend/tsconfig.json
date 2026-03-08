@@ -13,7 +13,7 @@
     "declarationMap": true,
     "sourceMap": true,
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDirs": ["./src", "./scripts"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
