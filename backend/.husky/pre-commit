@@ -1,4 +1,1 @@
-PATH="$HOME/.bun/bin:$PATH"
-
-# Run lint-staged for code quality checks
-bun lint-staged
+npx lint-staged
