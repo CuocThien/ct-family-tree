@@ -8,7 +8,12 @@ const httpLink = new HttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('auth_token');
+  let token = '';
+  try {
+    token = localStorage.getItem('auth_token') || '';
+  } catch (error) {
+    console.warn('Unable to access localStorage:', error);
+  }
   return {
     headers: {
       ...headers,
