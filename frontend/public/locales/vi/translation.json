@@ -1,0 +1,21 @@
+{
+  "welcome": "Chào mừng đến với Gia Phả",
+  "dashboard": "Bảng điều khiển",
+  "members": "Thành viên",
+  "tree": "Cây gia phả",
+  "settings": "Cài đặt",
+  "login": "Đăng nhập",
+  "logout": "Đăng xuất",
+  "register": "Đăng ký",
+  "loading": "Đang tải...",
+  "error": "Lỗi",
+  "success": "Thành công",
+  "cancel": "Hủy",
+  "save": "Lưu",
+  "delete": "Xóa",
+  "edit": "Sửa",
+  "add": "Thêm",
+  "search": "Tìm kiếm",
+  "noResults": "Không tìm thấy kết quả",
+  "confirmDelete": "Bạn có chắc chắn muốn xóa không?"
+}
