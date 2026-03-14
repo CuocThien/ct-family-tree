@@ -1,0 +1,21 @@
+{
+  "welcome": "Welcome to Family Tree",
+  "dashboard": "Dashboard",
+  "members": "Members",
+  "tree": "Family Tree",
+  "settings": "Settings",
+  "login": "Login",
+  "logout": "Logout",
+  "register": "Register",
+  "loading": "Loading...",
+  "error": "Error",
+  "success": "Success",
+  "cancel": "Cancel",
+  "save": "Save",
+  "delete": "Delete",
+  "edit": "Edit",
+  "add": "Add",
+  "search": "Search",
+  "noResults": "No results found",
+  "confirmDelete": "Are you sure you want to delete this?"
+}
